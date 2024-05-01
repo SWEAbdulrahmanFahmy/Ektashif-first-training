@@ -29,6 +29,26 @@ const CustomerReview= () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+          {
+              breakpoint: 640, 
+              settings: {
+                  slidesToShow: 1,
+              },
+          },
+          {
+              breakpoint: 768, 
+              settings: {
+                  slidesToShow: 2,
+              },
+          },
+          {
+              breakpoint:1024, 
+              settings: {
+                  slidesToShow: 3,
+              },
+          }
+      ],
        
       };
   return (
@@ -36,7 +56,7 @@ const CustomerReview= () => {
     <div >
     <h1 className='text-center text-[30px] font-bold pb-32'>
     ما يقوله المستخدمين 
-    <svg className='mt-8 ml-[35%]' width="352" height="7" viewBox="0 0 352 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className='mt-8 lg:ml-[35%] xl:ml-[35%] 2xl:ml-[42%] md:ml-[22%] ml-[10%] h-[7] xl:w-[352px] md:w-[352px] lg:w-[352px] w-[200px]'  viewBox="0 0 352 7" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M349 4L95.4528 3.99997" stroke="#3E59FE" stroke-width="5" stroke-linecap="round"/>
     <line x1="18.3807" y1="2.5" x2="2.50038" y2="2.5" stroke="#3E59FE" stroke-width="5" stroke-linecap="round"/>
     <line x1="48.2097" y1="2.5" x2="32.3294" y2="2.5" stroke="#3E59FE" stroke-width="5" stroke-linecap="round"/>
@@ -50,7 +70,7 @@ const CustomerReview= () => {
 
     {trips.map((item) => ( 
             <div key={item.id} className="px-4   text-center pb-10">
-      <img src={item.Imge} alt="ser1"  className='pb-16  '/>
+      <img src={item.Imge} alt="ser1"  className='lg:pb-16 md:pb-16  '/>
     </div>
     ))}
     

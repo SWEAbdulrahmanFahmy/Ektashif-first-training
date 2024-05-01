@@ -31,7 +31,7 @@ const Trips= () => {
       ,
       price:"800",
       period:"رحلة 3 أيام",
-      title:"مسجد محمد علي",
+      title:"محمد علي",
       city:"الأسكندرية"
     },{
       id:1,
@@ -49,6 +49,26 @@ const Trips= () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+          {
+              breakpoint: 640, 
+              settings: {
+                  slidesToShow: 1,
+              },
+          },
+          {
+              breakpoint: 768, 
+              settings: {
+                  slidesToShow: 2,
+              },
+          },
+          {
+              breakpoint:1024, 
+              settings: {
+                  slidesToShow: 3,
+              },
+          }
+      ],
         prevArrow: 
         <button  >
         <svg className='shadow-md rounded-full ' width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +120,7 @@ const Trips= () => {
     <div >
     <h1 className='text-center text-[30px] font-bold pb-32'>
     الاماكن السياحية المتوفرة في مصر
-    <svg className='mt-8 ml-[28%]' width="554" height="6" viewBox="0 0 554 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className='mt-8 lg:ml-[28%] xl:ml-[28%] 2xl:ml-[38%] md:ml-[7%] ml-[10%] h-[7] xl:w-[554px] md:w-[554px] lg:w-[554px] w-[200px]'  viewBox="0 0 554 6" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M551 3L132 3" stroke="#2B49FF" stroke-width="5" stroke-linecap="round"/>
     <line x1="30.3233" y1="2.99316" x2="2.49976" y2="2.99316" stroke="#2B49FF" stroke-width="5" stroke-linecap="round"/>
     <line x1="73.1468" y1="2.99316" x2="45.3233" y2="2.99316" stroke="#2B49FF" stroke-width="5" stroke-linecap="round"/>
@@ -115,7 +135,7 @@ const Trips= () => {
             <div key={item.id} className="px-4  text-center pb-10">
       <img src={item.Imge} alt="ser1"  className='pb-16  '/>
       <div className='flex flex-row-reverse justify-between'>
-      <h2 className='font-bold text-[20px] pb-2'>{item.title} , <span className='opacity-50 font-normal'>{item.city}</span></h2>
+      <h2 className='font-bold lg:text-[20px] md:text-[20px] xl:text-[20px] text-[14px] pb-2'>{item.title} , <span className='opacity-50 font-normal'>{item.city}</span></h2>
       <p>{item.price} LE</p>
       </div>
       <div className='flex flex-row justify-end pt-4'>

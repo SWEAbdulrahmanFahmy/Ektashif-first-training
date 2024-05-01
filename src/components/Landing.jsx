@@ -2,8 +2,8 @@ import React from 'react'
 import landingPic from "../assets/Landing.png"
 const Landing = () => {
   return (
-    <section className='flex flex-row justify-between px-12 py-10'>
-      <img src={landingPic} alt="person" className='w-[40%]'/>
+    <section className='flex lg:flex-row md:flex-row-wrap xl:flex-row flex-col-reverse justify-between px-12 py-10'>
+      <img src={landingPic} alt="person" className='lg:w-[40%]  xl:w-[40%] w-auto '/>
       <div className='text-right'>
        <p className='text-[#1E1E1E] opacity-50 text-[20px] font-semibold pt-6 pb-8 '>الرحلات معنا</p>
        <h1 className='text-[#2B49FF] font-black text-[70px] pb-10 '>إكتشف</h1>

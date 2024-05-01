@@ -42,6 +42,28 @@ const Services= () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+          responsive: [
+              {
+                  breakpoint: 640, 
+                  settings: {
+                      slidesToShow: 1,
+                  },
+              },
+              {
+                  breakpoint: 768, 
+                  settings: {
+                      slidesToShow: 2,
+                  },
+              },
+              {
+                  breakpoint:1024, 
+                  settings: {
+                      slidesToShow: 3,
+                  },
+              }
+          ],
+    
+      
         prevArrow: 
         <button  >
         <svg className='shadow-md rounded-full ' width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,13 +109,14 @@ const Services= () => {
          </svg>
          
          </button>
+         
       };
   return (
     <section className='px-20 py-14'>
     <div >
     <h1 className='text-center text-[30px] font-bold pb-32'>
     خدمات إكتشف 
-       <svg className='mt-8 ml-[41%]' width="230" height="6" viewBox="0 0 252 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <svg className='mt-8 lg:ml-[41%] xl:ml-[41%] md:ml-[34%] 2xl:ml-[45%] ml-[18%] h-[7] xl:w-[230px] md:w-[230px] lg:w-[230px] w-[200px]'  viewBox="0 0 252 6" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M249 3.15247L68.1025 3.15245" stroke="#3E59FE" stroke-width="5" stroke-linecap="round"/>
 <line x1="12.3977" y1="2.5" x2="2.50025" y2="2.5" stroke="#3E59FE" stroke-width="5" stroke-linecap="round"/>
 <line x1="33.6797" y1="2.5" x2="23.7822" y2="2.5" stroke="#3E59FE" stroke-width="5" stroke-linecap="round"/>
@@ -105,7 +128,7 @@ const Services= () => {
 
     {servs.map((item) => ( 
             <div key={item.id} className="px-4  text-center pb-10">
-      <img src={item.Imge} alt="ser1"  className='py-10 w-[100px] mx-32 '/>
+      <img src={item.Imge} alt="ser1"  className='py-10 w-[100px] lg:mx-32 xl:mx-32 mx-16 md:mx-20 2xl:mx-[45%]'/>
       <h2 className='font-bold text-[20px] pb-2'>{item.title}</h2>
       <p className='font-normal text-[16px] text-[#1E1E1E] opacity-50 '>
       {item.description}
